@@ -13,17 +13,18 @@ public class Digits
 		}
 		while (num >0) {
 			digitList.add(o,new Integer(num%10));
+			num/=10;
 		}   
 	}
 
 	public boolean isStrictlyIncreasing()
 	{ /* to be implemented in part (b) */
 		for (int i = 0; i<digitList.size()-1; i++){
-			if (digitList.get(i) >= digitList.get(i++){
+			if (digitList.get(i) >= digitList.get(i+1)){
 				return false;
 			}
 		}
-		return false; 
+		return true; 
 	}
 	
 	public String toString()
